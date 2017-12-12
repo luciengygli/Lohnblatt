@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+	<title>Payroll</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- Die 3 Meta-Tags oben *m�ssen* zuerst im head stehen; jeglicher sonstiger head-Inhalt muss *nach* diesen Tags kommen -->
+	<meta name="description" content="">
+	<meta name="author" content="Adrian Wilhelm, Jeffrey Smith, Lucien Gygli">
+	<link rel="icon" href="image/favicon.ico">
+
+	<!-- Bootstrap-CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Special Styles -->
+	<link href="css/sticky-footer-navbar.css" rel="stylesheet">
+	<!-- Own CSS -->
+	<link href="css/style.css" rel="stylesheet">
+	<!-- Own JS -->
+
+</head>
+
+<body>
+
+	<div id="contentSettings" class="mt-5">
+		<!-- Content -->
+		<div class="container text-center">
+			<div class="page-header text-center">
+				<h1>Details</h1>
+			</div>
+			<div class="mt-5">
+				<p class="text-justify">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+					aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+					no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+					diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+					et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+			</div>
+
+			<hr/>
+
+			<!-- Site -->
+
+			<div class="container-fluid">
+				<div class="row no-gutter" id="detailsPayroll">
+					<div class="col-6 text-left">
+						<label for="i_date">Monat und Jahr der Monatsabrechnung</label>
+					</div>
+					<div class="col-6">
+						<input type="text" class="form-control" id="i_datum" placeholder="00/0000"></input>
+					</div>
+
+					<div class="col-6 text-left">
+						<label for="i_date_bezahlung">Datum der Transaktion</label>
+					</div>
+					<div class="col-6">
+						<input type="date" class="form-control" id="i_date_bezahlung"></input>
+					</div>
+				</div>
+
+				<hr/>
+
+				<div class="row no-gutter" id="detailsEmployee">
+
+					<div class="col-12">
+						<h2>Details zum Arbeitnehmer</h2>
+					</div>
+					<div class="col-12">
+						<br>
+					</div>
+
+					<div class="col-6 text-left">
+						<label for="i_nehmer_vorname">Vorname</label>
+					</div>
+					<div class="col-6">
+						<input type="text" class="form-control" id="i_nehmer_vorname" placeholder="First name"></input>
+					</div>
+
+					<div class="col-6 text-left">
+						<label for="i_nehmer_name">Nachname</label>
+					</div>
+					<div class="col-6">
+						<input type="text" class="form-control" id="i_nehmer_name" placeholder="Last name"></input>
+					</div>
+
+					<div class="col-6 text-left">
+						<label for="i_nehmer_birthdate">Geburtdatum</label>
+					</div>
+					<div class="col-6">
+						<input type="date" class="form-control" id="i_nehmer_birthdate"></input>
+					</div>
+
+					<div class="col-6 text-left">
+						<label for="i_nehmer_ahv">AHV-Nummer</label>
+					</div>
+					<div class="col-6">
+						<input type="text" class="form-control" id="i_nehmer_ahv" placeholder="000.0000.0000.00"></input>
+					</div>
+
+					<div class="col-12 text-left">
+						<h4>
+							<u>Wohnsitz</u>
+						</h4>
+					</div>
+
+					<div class="col-6 text-left">
+						<label for="i_nehmer_strasse">Strasse und Strassennummer</label>
+					</div>
+					<div class="col-6">
+						<input type="text" class="form-control" id="i_nehmer_strasse" placeholder="Street"></input>
+					</div>
+
+					<div class="col-6 text-left">
+						<label for="i_nehmer_plz">PLZ</label>
+					</div>
+					<div class="col-6">
+						<input type="number" class="form-control" id="i_date_plz" placeholder="0000" min="1000" max="9999"></input>
+					</div>
+
+					<div class="col-6 text-left">
+						<label for="i_nehmer_ort">Ort</label>
+					</div>
+					<div class="col-6">
+						<input type="text" class="form-control" id="i_nehmer_ort" placeholder="City"></input>
+					</div>
+
+					<div class="col-12 text-left">
+						<h4>
+							<u>Finanzen</u>
+						</h4>
+					</div>
+
+					<div class="col-6 text-left">
+						<label for="i_nehmer_lohn">Lohn</label>
+					</div>
+					<div class="col-6">
+						<input type="number" class="form-control" id="i_nehmer_lohn" placeholder="0.00" pattern="[0-9]+([\.,][0-9]+)?" step="0.05"
+						 min="0"></input>
+					</div>
+
+					<div class="col-6 text-left">
+						<label for="i_nehmer_iban">IBAN</label>
+					</div>
+					<div class="col-6">
+						<input type="text" class="form-control" id="i_date_iban" placeholder="CH00 0000 0000 0000 0000 0"></input>
+					</div>
+
+				</div>
+			</div>
+
+			<hr/>
+
+			<div class="row no-gutter" id="detailsCompany">
+
+				<div class="col-12">
+					<h2>Details zum Arbeitsgeber</h2>
+				</div>
+				<div class="col-12">
+					<br>
+				</div>
+
+				<div class="col-6 text-left">
+					<label for="i_geber_strasse">Firma</label>
+				</div>
+				<div class="col-6">
+					<input type="text" class="form-control" id="i_geber_name" placeholder="Company"></input>
+				</div>
+
+				<div class="col-6 text-left">
+					<label for="i_geber_strasse">Strasse und Strassennummer</label>
+				</div>
+				<div class="col-6">
+					<input type="text" class="form-control" id="i_geber_strasse" placeholder="Street"></input>
+				</div>
+
+				<div class="col-6 text-left">
+					<label for="i_geber_plz">PLZ</label>
+				</div>
+				<div class="col-6">
+					<input type="number" class="form-control" id="i_geber_plz" placeholder="0000" min="1000" max="9999"></input>
+				</div>
+
+				<div class="col-6 text-left">
+					<label for="i_geber_ort">Ort</label>
+				</div>
+				<div class="col-6">
+					<input type="text" class="form-control" id="i_geber_ort" placeholder="City"></input>
+				</div>
+
+				<div class="col-6 text-left">
+					<label for="i_geber_iban">IBAN</label>
+				</div>
+				<div class="col-6">
+					<input type="text" class="form-control" id="i_geber_iban" placeholder="CH00 0000 0000 0000 0000 0"></input>
+				</div>
+			</div>
+
+			<hr/>
+
+			<div class="row no-gutter">
+
+				<div class="col-12">
+					<h2>Kinder</h2>
+				</div>
+				<div class="col-12">
+					<br>
+				</div>
+
+				<div>
+					<p class="text-justify">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+						magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+						no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+						diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+						et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+				</div>
+				<div class="col-12">
+					<button class="btn" onclick="toggleChildren()">Expand</button>
+				</div>
+
+				<div id="children" class="col-12 no-gutter container-fluid row">
+					<div class="col-12">
+						<br>
+					</div>
+
+					<div class="col-6 text-left">
+						<label for="i_nehmer_u16">Anzahl Kinder unter 16 Jahren</label>
+					</div>
+					<div class="col-6">
+						<input type="number" class="form-control" id="i_nehmer_u16" placeholder="0"></input>
+					</div>
+
+					<div class="col-6 text-left">
+						<label for="i_nehmer_u16">Anzahl Kinder zwischen 16 und 25 Jahren in Ausbildung</label>
+					</div>
+					<div class="col-6">
+						<input type="number" class="form-control" id="i_nehmer_u16" placeholder="0"></input>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<p></p>
+
+		<div class="text-center">
+			<button class=" btn bg-primary text-white " onclick="getPayroll()">Get the payroll</button>
+		</div>
+
+		<br>
+
+		<footer class="footer ">
+			<div class="container ">
+				<p class="text-muted ">&copy Adrian Wilhelm, Jeffrey Smith, Lucien Gygli</p>
+			</div>
+		</footer>
+
+	</div>
+
+
+	<div id="contentPayroll">
+
+		<div class="container-fluid">
+			<p></p>
+			<div class="row">
+
+				<div class="col-1">
+				</div>
+
+				<div class="col-10">
+
+					<!-- Content -->
+					<div class="container-fluid">
+
+						<div class="row" id="geber_adresse">
+							<div class="col-6">
+								<output id="o_geber_name">Name</output>
+							</div>
+							<div class="col-6">
+							</div>
+
+							<div class="col-6">
+								<output id="o_geber_street">Strasse</output>
+							</div>
+							<div class="col-6">
+							</div>
+
+							<div class="col-6">
+								<output id="o_geber_plzort">0000 Stadt</output>
+							</div>
+							<div class="col-6">
+							</div>
+
+							<div class="col-6">
+								CH-Switzerland
+							</div>
+							<div class="col-6">
+							</div>
+						</div>
+
+						<p></p>
+						<p></p>
+
+						<div class="row" id="nehmer_adresse">
+							<div class="col-6">
+								<output id="o_nehmer_name">Vorname Nachname</output>
+							</div>
+							<div class="col-3">
+								Lohnabrechnung
+							</div>
+							<div class="col-3 text-right">
+								<output id="o_date" class="text-right">00/0000</output>
+							</div>
+
+							<div class="col-6">
+								<output id="o_nehmer_street">Strasse</output>
+							</div>
+							<div class="col-6">
+							</div>
+
+							<div class="col-6">
+								<output id="o_nehmer_plzort">0000 Stadt</output>
+							</div>
+							<div class="col-3">
+								AHV-Nummber
+							</div>
+							<div class="col-3 text-right">
+								<output id="o_ahv_number" class="text-right">000.0000.0000.00</output>
+							</div>
+
+							<div class="col-6">
+								CH-Switzerland
+							</div>
+							<div class="col-6">
+							</div>
+						</div>
+
+						<p></p>
+						<p></p>
+
+						<div class="row" id="ort_datum">
+							<div class="col-6">
+								<output id="o_ortdate">Ort, Datum</output>
+							</div>
+							<div class="col-6">
+							</div>
+						</div>
+
+						<p></p>
+						<p></p>
+						<p></p>
+
+						<div class="row" id="lohn_allgemein">
+							<div class="col-6">
+								<h4>Lohn</h4>
+							</div>
+							<div class="col-6">
+							</div>
+
+							<div class="col-6">
+								Grundlohn
+							</div>
+							<div class="col-6 text-right">
+								<output id="o_lohn">0000.00</output>
+							</div>
+
+							<div class="col-6">
+								Familienzulagen
+							</div>
+							<div class="col-6 text-right">
+								<output id="o_familie">000.00</output>
+							</div>
+						</div>
+
+						<p></p>
+						<p></p>
+
+						<div class="row" id="lohn_deductions">
+							<div class="col-6">
+								<h4>Abzüge</h4>
+							</div>
+							<div class="col-6">
+							</div>
+
+							<div class="col-4">
+								AHV/IV/EO
+							</div>
+							<div class="col-1 text-right">
+								<output id="o_ahv_perc">0.000</output>
+							</div>
+							<div class="col-3">
+								Prozent von
+							</div>
+							<div class="col-1">
+								<output id="o_ahv_from">0000.00</output>
+							</div>
+							<div class="col-3 text-right">
+								<output id="o_ahv_val">000.00</output>
+							</div>
+
+							<div class="col-4">
+								ALV
+							</div>
+							<div class="col-1 text-right">
+								<output id="o_alv_perc">0.000</output>
+							</div>
+							<div class="col-3">
+								Prozent von
+							</div>
+							<div class="col-1">
+								<output id="o_alv_from">0000.00</output>
+							</div>
+							<div class="col-3 text-right">
+								<output id="o_alv_val">000.00</output>
+							</div>
+
+							<div class="col-4">
+								BVG
+							</div>
+							<div class="col-1 text-right">
+								<output id="o_bvg_perc">0.000</output>
+							</div>
+							<div class="col-3">
+								Prozent von
+							</div>
+							<div class="col-1">
+								<output id="o_bvg_from">0000.00</output>
+							</div>
+							<div class="col-3 text-right">
+								<output id="o_bvg_val">000.00</output>
+							</div>
+
+							<div class="col-4">
+								NBUV
+							</div>
+							<div class="col-1 text-right">
+								<output id="o_nbu_perc">0.000</output>
+							</div>
+							<div class="col-3">
+								Prozent von
+							</div>
+							<div class="col-1">
+								<output id="o_nbu_from">0000.00</output>
+							</div>
+							<div class="col-3 text-right">
+								<output id="o_nbu_val">000.00</output>
+							</div>
+
+							<div class="col-6">
+								<h6>Total der Abzüge</h6>
+							</div>
+							<div class="col-6 text-right">
+								<output id="o_deductions">0000.00</output>
+							</div>
+						</div>
+
+						<p></p>
+						<p></p>
+
+						<div class="row" id="lohn_netto">
+							<div class="col-6">
+								<h4>Nettolohn</h4>
+							</div>
+							<div class="col-6 text-right">
+								<output id="o_lohn_netto">0000.00</output>
+							</div>
+
+							<div class="col-3">
+								Spesen
+							</div>
+							<div class="col-6">
+							</div>
+							<div class="col-3 text-right">
+								<output id="o_spesen">0000.00</output>
+							</div>
+
+							<div class="col-6">
+								<h5>Total Auszahlung</h5>
+							</div>
+							<div class="col-4 text-right">
+								<h6>CHF</h6>
+							</div>
+							<div class="col-2 text-right">
+								<h6>
+									<output id="o_lohn_real">0000.00</output>
+								</h6>
+								<hr>
+							</div>
+						</div>
+
+						<p></p>
+						<p></p>
+						<p></p>
+
+						<div class="row" id="transaction">
+							<div class="col-4">
+								Überweisung am
+							</div>
+							<div class="col-3">
+								<output id="o_date_transaction">00.00.0000</output>
+							</div>
+							<div class="col-5">
+							</div>
+
+							<div class="col-4">
+								auf Konto
+							</div>
+							<div class="col-6">
+								<output id="o_nehmer_iban">CH00 0000 0000 0000 0000 0</output>
+							</div>
+							<div class="col-2">
+							</div>
+
+							<div class="col-4">
+								von Konto
+							</div>
+							<div class="col-6">
+								<output id="o_geber_iban">CH00 0000 0000 0000 0000 0</output>
+							</div>
+							<div class="col-2	">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN "
+	 crossorigin="anonymous "></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js " integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4 "
+	 crossorigin="anonymous "></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js " integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1 "
+	 crossorigin="anonymous "></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+	<!-- IE10-Anzeigefenster-Hack für Fehler auf Surface und Desktop-Windows-8 -->
+	<script src="js/ie10-viewport-bug-workaround.js "></script>
+
+	<!-- JavaScript -->
+	<script src="js/myTestScript.js"></script>
+
+</body>
+
+</html>
